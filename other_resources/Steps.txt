@@ -1,0 +1,45 @@
+https://medium.com/codingthesmartway-com-blog/building-an-angular-5-project-with-bootstrap-4-and-firebase-4504ff7717c1
+
+>> node -v
+v8.9.2
+
+>> npm -v
+5.5.1
+
+>> npm list -g --depth=0
++-- @angular/cli@1.7.1
++-- express-generator@4.15.5
++-- http-server@0.11.0
++-- npm@5.5.1
+`-- npm-check-updates@2.14.0
+
+>> npm install -g @angular/cli@latest
+
+>> ng new ng4fbbootstrap --skip-install 
+
+>> npm install
+
+[Create project in Firebase console and click Add project to web app and copy the content as specified in doc, to environments\environments.prod.ts and environments\environment.ts]
+//>> npm install --save firebase@^4.4.0 angularfire2@^5.0.0-rc.2
+>> npm install --save firebase angularfire2
++ angularfire2@5.0.0-rc.6
++ firebase@4.10.1
+
+
+
+>> npm install --save bootstrap@next
+
+[Import bootstrap file in styles.css]
+
+[Add bootstrap template code to app.component.ts]
+
+>> ng g component app-navbar
+
+[Make changes to the app-navbar\app-navbar.component.*]
+
+[To avoid direct DOM by jQuery for Angular app through Bootstrap, use ng-bootstrap]
+>> npm install --save @ng-bootstrap/ng-bootstrap
+
+[To Get response from Firebase realtime database]
+>> ng g component courses-list
+

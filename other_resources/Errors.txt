@@ -1,0 +1,26 @@
+-------------------------1-----------------------
+When trying to get data from Firebase Realtime database
+
+Error:
+permission_denied at /courses: Client doesn't have permission to access the desired data.
+
+SOL:
+Firebase console > project > database > get started > Rules >
+change
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}
+
+to 
+{
+    "rules": {    
+        ".read": true,
+        ".write": true
+    }
+}
+
+NOTE: Make sure to add the JSON contents in filename.json and import that in Firebase console > project > database > get started > Data > ... > Import JSON
+-------------------------------------------------
